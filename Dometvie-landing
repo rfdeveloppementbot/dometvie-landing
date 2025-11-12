@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trouvez la solution adaptée à votre mobilité en 2 minutes</title>
+  <meta name="description" content="Adaptation de domicile pour seniors : douches sécurisées, monte-escaliers, rampes, élévateurs. Devis gratuit, intervention près de chez vous." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: Inter, sans-serif; }
+    .stamp{display:inline-block;padding:10px 18px;border:3px solid #005F73;color:#005F73;font-weight:800;text-transform:uppercase;letter-spacing:.06em;border-radius:9999px;transform:rotate(-8deg);box-shadow:0 2px 0 rgba(0,0,0,.06), inset 0 0 0 2px rgba(0,95,115,.2);background:radial-gradient(transparent 60%, rgba(0,95,115,.06) 61%);} 
+  .btn-pop{transition:transform .2s ease, box-shadow .2s ease;}
+  .btn-pop:hover{transform:translateY(-2px); box-shadow:0 12px 30px rgba(226,0,122,.25);}
+  @keyframes stampPop{0%{transform:rotate(-8deg) scale(.98);}50%{transform:rotate(-8deg) scale(1);}100%{transform:rotate(-8deg) scale(.98);}}
+  .stamp{animation:stampPop 3s ease-in-out infinite;}
+  </style>
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;t.src='https://connect.facebook.net/en_US/fbevents.js';
+    s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script');
+    fbq('init', '61574020980933');
+    fbq('track', 'PageView');
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <div class="w-full text-center text-sm bg-[#E2007A] text-white py-2 px-4">Devis gratuit • Réponse sous 24h • Entreprise accompagnante MaPrimeAdapt’</div>
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-sm sticky top-0 z-20">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-xl font-extrabold text-[#E2007A]">DOMETVIE Lyon Sud Ouest</h1>
+      <a href="#form" class="text-sm bg-[#E2007A] text-white py-2 px-4 rounded-xl shadow-lg hover:shadow-xl transition btn-pop">Demander un devis gratuit</a>
+    </div>
+  </header>
+
+  <!-- FORM -->
+  <section class="container mx-auto px-4 py-12">
+    <h2 class="text-3xl md:text-4xl font-extrabold leading-tight mb-4">Trouvez la solution adaptée à votre mobilité en 2 minutes</h2>
+    <form id="form" class="space-y-4" novalidate>
+      <div>
+        <label class="text-sm font-medium" for="first_name">Prénom</label>
+        <input id="first_name" name="first_name" type="text" class="w-full border px-3 py-2 rounded-xl" required />
+      </div>
+      <div>
+        <label class="text-sm font-medium" for="phone">Téléphone</label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" class="w-full border px-3 py-2 rounded-xl" required />
+      </div>
+      <div>
+        <label class="text-sm font-medium" for="email">Email</label>
+        <input id="email" name="email" type="email" class="w-full border px-3 py-2 rounded-xl" required />
+      </div>
+      <div>
+        <label class="text-sm font-medium" for="postal_code">Code postal</label>
+        <input id="postal_code" name="postal_code" type="text" inputmode="numeric" pattern="[0-9]{5}" class="w-full border px-3 py-2 rounded-xl" required />
+      </div>
+      <fieldset class="border rounded-xl p-4">
+        <legend class="text-sm font-semibold">Quel est votre projet ?</legend>
+        <div class="mt-3 grid grid-cols-1 gap-3">
+          <label class="flex items-center gap-3"><input type="checkbox" name="interests" value="monte_escalier" class="h-5 w-5"> Monte-escalier</label>
+          <label class="flex items-center gap-3"><input type="checkbox" name="interests" value="douche_securisee" class="h-5 w-5"> Douche sécurisée</label>
+          <label class="flex items-center gap-3"><input type="checkbox" name="interests" value="douche_pmr" class="h-5 w-5"> Douche PMR</label>
+          <label class="flex items-center gap-3"><input type="checkbox" name="interests" value="ascenseur_privatifs" class="h-5 w-5"> Ascenseur privatif</label>
+          <label class="flex items-center gap-3"><input type="checkbox" name="interests" value="domotique" class="h-5 w-5"> Domotique</label>
+        </div>
+      </fieldset>
+      <button type="submit" id="submitBtn" class="w-full bg-[#E2007A] text-white py-3 rounded-xl font-semibold">Envoyer ma demande</button>
+      <p id="formMsg" class="text-sm text-gray-600 mt-2"></p>
+    </form>
+  </section>
+
+  <script>
+    const WEBHOOK_URL = 'https://hook.eu1.make.com/kuh3w1knowsfl2kfacvx5311x8muvylr';
+    const form = document.getElementById('form');
+    const btn = document.getElementById('submitBtn');
+    const msg = document.getElementById('formMsg');
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      msg.textContent = '';
+
+      if (!form.checkValidity()) {
+        msg.textContent = 'Merci de vérifier les champs requis.';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Envoi en cours…';
+
+      const payload = {
+        source: 'landing-dometvie-lyon-sud-ouest',
+        first_name: document.getElementById('first_name')?.value || '',
+        phone: document.getElementById('phone')?.value || '',
+        email: document.getElementById('email')?.value || '',
+        postal_code: document.getElementById('postal_code')?.value || '',
+        interests: Array.from(document.querySelectorAll('input[name="interests"]:checked')).map(i => i.value),
+        ts: new Date().toISOString(),
+        page: location.href
+      };
+
+      try {
+        if (window.fbq) {
+          fbq('track', 'Lead', { content_name: 'Lead DOMETVIE Lyon Sud Ouest' });
+        }
+
+        // Envoi avec timeout de 7 secondes maximum
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 7000);
+
+        try {
+          await fetch(WEBHOOK_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+            signal: controller.signal
+          });
+        } catch (err) {
+          console.warn('Erreur webhook, on redirige quand même.', err);
+        } finally {
+          clearTimeout(timeout);
+        }
+
+        // Redirection forcée vers la page Merci, même si erreur Make
+        window.location.href = 'merci.html';
+        return;
+      } catch (err) {
+        console.error('Erreur d\'envoi :', err);
+        window.location.href = 'merci.html';
+        return;
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Envoyer ma demande';
+      }
+    });
+  </script>
+</body>
+</html>
