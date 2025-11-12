@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Merci pour votre demande</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Pixel Meta Lead -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;t.src='https://connect.facebook.net/en_US/fbevents.js';
+    s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script');
+    fbq('init', '61574020980933');
+    fbq('track', 'Lead');
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen flex items-center justify-center p-6">
+  <div class="bg-white rounded-3xl shadow-xl p-10 max-w-lg text-center">
+    <h1 class="text-3xl font-extrabold text-[#E2007A] mb-4">Merci pour votre demande !</h1>
+    <p class="text-lg text-gray-700">Votre message a bien été envoyé.</p>
+    <p class="text-gray-600 mt-2">Karine et Gregory vous rappelleront très prochainement pour discuter de votre projet.</p>
+    <a href="/" class="inline-block mt-6 bg-[#E2007A] text-white px-6 py-3 rounded-xl shadow hover:shadow-lg transition">Retour à l’accueil</a>
+  </div>
+</body>
+</html>
