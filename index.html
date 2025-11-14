@@ -1,78 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DOMETVIE Lyon Sud Ouest — Adaptation du domicile pour seniors</title>
+  <meta name="description" content="Adaptation du domicile pour seniors et personnes à mobilité réduite : douches sécurisées, monte-escaliers, élévateurs privatifs, domotique. Devis gratuit." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    .btn-pop{transition:transform .2s ease, box-shadow .2s ease;}
+    .btn-pop:hover{transform:translateY(-2px); box-shadow:0 12px 30px rgba(226,0,122,.25);}    
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <div class="w-full text-center text-sm bg-[#E2007A] text-white py-2 px-4">
+    Devis gratuit • Réponse sous 24h • Entreprise accompagnante MaPrimeAdapt’
+  </div>
 
-<!-- HERO SIMPLE SANS FOND -->
-<section class="container mx-auto px-4 py-12 grid md:grid-cols-2 gap-10 items-start">
-<!-- COLONNE TEXTE -->
-<div>
-<h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
-Spécialistes de l’adaptation du domicile pour seniors et personnes à mobilité réduite : douche sécurisée, monte-escalier, élévateur privatif…
-</h2>
-<p class="mt-4 text-lg text-gray-700">
-Installés au plus près de chez vous, nous dédions notre énergie à améliorer votre qualité de vie en vous permettant de rester chez vous en toute sécurité et autonomie.
-</p>
-<p class="mt-4 text-gray-700 text-lg font-semibold">👋 Karine et Gregory à votre écoute.</p>
-<ul class="mt-6 space-y-2 text-gray-700">
-<li>✅ Devis gratuit et rapide</li>
-<li>✅ Spécialistes seniors & PMR</li>
-<li>✅ Aides financières possibles : MaPrimeAdapt’, MDPH, crédit d’impôt, APA, caisses de retraite…</li>
-</ul>
-<a href="#form" class="inline-block mt-6 bg-[#E2007A] text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition transform btn-pop">
-Demander mon devis gratuit
-</a>
-</div>
+  <!-- HEADER -->
+  <header class="bg-white shadow-sm">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-xl font-extrabold text-[#E2007A]">DOMETVIE Lyon Sud Ouest</h1>
+      <a href="#form" class="text-sm bg-[#E2007A] text-white py-2 px-4 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition transform btn-pop">
+        Demander un devis gratuit
+      </a>
+    </div>
+  </header>
 
+  <!-- HERO SIMPLE SANS FOND -->
+  <section class="container mx-auto px-4 py-12 grid md:grid-cols-2 gap-10 items-start">
+    <!-- COLONNE TEXTE -->
+    <div>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
+        Spécialistes de l’adaptation du domicile pour seniors et personnes à mobilité réduite : douche sécurisée, monte-escalier, élévateur privatif…
+      </h2>
+      <p class="mt-4 text-lg text-gray-700">
+        Installés au plus près de chez vous, nous dédions notre énergie à améliorer votre qualité de vie en vous permettant de rester chez vous en toute sécurité et autonomie.
+      </p>
+      <p class="mt-4 text-gray-700 text-lg font-semibold">👋 Karine et Gregory à votre écoute.</p>
+      <ul class="mt-6 space-y-2 text-gray-700">
+        <li>✅ Devis gratuit et rapide</li>
+        <li>✅ Spécialistes seniors & PMR</li>
+        <li>✅ Aides financières possibles : MaPrimeAdapt’, MDPH, crédit d’impôt, APA, caisses de retraite…</li>
+      </ul>
+      <a href="#form" class="inline-block mt-6 bg-[#E2007A] text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition transform btn-pop">
+        Demander mon devis gratuit
+      </a>
+    </div>
 
-<!-- PHOTO KARINE & GREGORY -->
-<div class="flex justify-center items-start">
-<img id="ownerPhoto"
-src="karine-gregory.png"
-alt="Karine & Gregory – DOMETVIE"
-class="rounded-2xl shadow-xl max-w-[220px] h-auto"
-loading="lazy" />
-</div>
-</section>
+    <!-- PHOTO KARINE & GREGORY -->
+    <div class="flex justify-center items-start">
+      <img id="ownerPhoto"
+           src="karine-gregory.png"
+           alt="Karine & Gregory – DOMETVIE"
+           class="rounded-2xl shadow-xl max-w-[220px] h-auto"
+           loading="lazy" />
+    </div>
+  </section>
 
+  <!-- FORMULAIRE -->
+  <section class="container mx-auto px-4 pb-16">
+    <form id="form" class="space-y-4 max-w-xl mx-auto bg-white p-6 rounded-2xl shadow" novalidate>
+      <div>
+        <label class="text-sm font-medium" for="nom_prenom">Nom & Prénom</label>
+        <input id="nom_prenom" name="nom_prenom" type="text" class="w-full border px-3 py-2 rounded-xl" required />
+      </div>
+      <div>
+        <label class="text-sm font-medium" for="phone">Téléphone</label>
+        <input id="phone" name="phone" type="tel" inputmode="tel" class="w-full border px-3 py-2 rounded-xl" required />
+      </div>
+      <div>
+        <label class="text-sm font-medium" for="email">Email</label>
+        <input id="email" name="email" type="email" class="w-full border px-3 py-2 rounded-xl" required />
+      </div>
+      <div>
+        <label class="text-sm font-medium" for="commune">Commune</label>
+        <input id="commune" name="commune" type="text" class="w-full border px-3 py-2 rounded-xl" required />
+      </div>
 
-<!-- FORMULAIRE -->
-<section class="container mx-auto px-4 pb-16">
-<form id="form" class="space-y-4 max-w-xl mx-auto bg-white p-6 rounded-2xl shadow" novalidate>
-<div>
-<label class="text-sm font-medium" for="nom_prenom">Nom & Prénom</label>
-<input id="nom_prenom" name="nom_prenom" type="text" class="w-full border px-3 py-2 rounded-xl" required />
-</div>
-<div>
-<label class="text-sm font-medium" for="phone">Téléphone</label>
-<input id="phone" name="phone" type="tel" inputmode="tel" class="w-full border px-3 py-2 rounded-xl" required />
-</div>
-<div>
-<label class="text-sm font-medium" for="email">Email</label>
-<input id="email" name="email" type="email" class="w-full border px-3 py-2 rounded-xl" required />
-</div>
-<div>
-<label class="text-sm font-medium" for="commune">Commune</label>
-<input id="commune" name="commune" type="text" class="w-full border px-3 py-2 rounded-xl" required />
-</div>
+      <fieldset class="border rounded-xl p-4">
+        <legend class="text-sm font-semibold">Quel est votre projet ?</legend>
+        <div class="mt-3 grid grid-cols-1 gap-3">
+          <label class="flex items-center gap-3"><input type="checkbox" name="interests" value="monte_escalier" class="h-5 w-5"> <span>Monte-escalier</span></label>
+          <label class="flex items-center gap-3"><input type="checkbox" name="interests" value="douche_securisee" class="h-5 w-5"> <span>Douche sécurisée</span></label>
+          <label class="flex items-center gap-3"><input type="checkbox" name="interests" value="douche_pmr" class="h-5 w-5"> <span>Douche PMR</span></label>
+          <label class="flex items-center gap-3"><input type="checkbox" name="interests" value="ascenseur_privatifs" class="h-5 w-5"> <span>Ascenseur privatif</span></label>
+          <label class="flex items-center gap-3"><input type="checkbox" name="interests" value="domotique" class="h-5 w-5"> <span>Domotique</span></label>
+        </div>
+      </fieldset>
 
+      <button type="submit" id="submitBtn" class="w-full bg-[#E2007A] text-white py-3 rounded-xl font-semibold">Envoyer ma demande</button>
+      <p id="formMsg" class="text-sm text-gray-600 mt-2"></p>
+    </form>
+  </section>
 
-<fieldset class="border rounded-xl p-4">
-<legend class="text-sm font-semibold">Quel est votre projet ?</legend>
-<div class="mt-3 grid grid-cols-1 gap-3">
-<label class="flex items-center gap-3"><input type="checkbox" name="interests" value="monte_escalier" class="h-5 w-5"> <span>Monte-escalier</span></label>
-<label class="flex items-center gap-3"><input type="checkbox" name="interests" value="douche_securisee" class="h-5 w-5"> <span>Douche sécurisée</span></label>
-<label class="flex items-center gap-3"><input type="checkbox" name="interests" value="douche_pmr" class="h-5 w-5"> <span>Douche PMR</span></label>
-<label class="flex items-center gap-3"><input type="checkbox" name="interests" value="ascenseur_privatifs" class="h-5 w-5"> <span>Ascenseur privatif</span></label>
-<label class="flex items-center gap-3"><input type="checkbox" name="interests" value="domotique" class="h-5 w-5"> <span>Domotique</span></label>
-</div>
-</fieldset>
-
-
-<button type="submit" id="submitBtn" class="w-full bg-[#E2007A] text-white py-3 rounded-xl font-semibold">Envoyer ma demande</button>
-<p id="formMsg" class="text-sm text-gray-600 mt-2"></p>
-</form>
-</section>
-
-
-<footer class="bg-gray-900 text-gray-300 py-10">
-<div class="container mx-auto px-4 text-center text-sm">© DOMETVIE Lyon Sud Ouest — Adaptation de domicile pour seniors & PMR.</div>
-</footer>
+  <footer class="bg-gray-900 text-gray-300 py-10">
+    <div class="container mx-auto px-4 text-center text-sm">© DOMETVIE Lyon Sud Ouest — Adaptation de domicile pour seniors & PMR.</div>
+  </footer>
 </body>
 </html>
