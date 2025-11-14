@@ -12,7 +12,7 @@
   <style>
     body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
     .btn-pop{transition:transform .2s ease, box-shadow .2s ease;}
-    .btn-pop:hover{transform:translateY(-2px); box-shadow:0 12px 30px rgba(226,0,122,.25);}    
+    .btn-pop:hover{transform:translateY(-2px); box-shadow:0 12px 30px rgba(226,0,122,.25);}
   </style>
 
   <!-- Meta Pixel (Facebook) -->
@@ -24,148 +24,213 @@
     fbq('init', '61574020980933');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=61574020980933&ev=PageView&noscript=1"/></noscript>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=61574020980933&ev=PageView&noscript=1"/>
+  </noscript>
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <div class="w-full text-center text-sm bg-[#E2007A] text-white py-2 px-4">Devis gratuit • Réponse sous 24h • Entreprise accompagnante MaPrimeAdapt’</div>
+  <div class="w-full text-center text-sm bg-[#E2007A] text-white py-2 px-4">
+    Devis gratuit • Réponse sous 24h • Entreprise accompagnante MaPrimeAdapt’
+  </div>
 
   <!-- HEADER -->
   <header class="bg-white shadow-sm">
     <div class="container mx-auto px-4 py-4 flex items-center justify-between">
       <h1 class="text-xl font-extrabold text-[#E2007A]">DOMETVIE Lyon Sud Ouest</h1>
-      <a href="#form" class="text-sm bg-[#E2007A] text-white py-2 px-4 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition transform btn-pop">Demander un devis gratuit</a>
+      <a href="#form"
+         class="text-sm bg-[#E2007A] text-white py-2 px-4 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition transform btn-pop">
+        Demander un devis gratuit
+      </a>
     </div>
   </header>
 
-  <!-- HERO simple, photo + texte -->
+  <!-- HERO -->
   <section class="container mx-auto px-4 py-12 grid md:grid-cols-2 gap-10 items-start">
     <!-- COLONNE TEXTE -->
     <div>
-      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">Spécialistes de l’adaptation du domicile pour seniors et personnes à mobilité réduite : douche sécurisée, monte-escalier, élévateur privatif…</h2>
-      <p class="mt-4 text-lg text-gray-700">Installés au plus près de chez vous, nous dédions notre énergie à améliorer votre qualité de vie en vous permettant de rester chez vous en toute sécurité et autonomie.</p>
-      <p class="mt-4 text-gray-700 text-lg font-semibold">👋 Karine et Gregory à votre écoute.</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
+        Spécialistes de l’adaptation du domicile pour seniors et personnes à mobilité réduite :
+        douche sécurisée, monte-escalier, élévateur privatif…
+      </h2>
+      <p class="mt-4 text-lg text-gray-700">
+        Installés au plus près de chez vous, nous dédions notre énergie à améliorer votre qualité de vie
+        en vous permettant de rester chez vous en toute sécurité et autonomie.
+      </p>
+      <p class="mt-4 text-gray-700 text-lg font-semibold">
+        👋 Karine et Gregory à votre écoute.
+      </p>
       <ul class="mt-6 space-y-2 text-gray-700">
         <li>✅ Devis gratuit et rapide</li>
-        <li>✅ Spécialistes seniors & PMR</li>
+        <li>✅ Spécialistes seniors &amp; PMR</li>
         <li>✅ Aides financières possibles : MaPrimeAdapt’, MDPH, crédit d’impôt, APA, caisses de retraite…</li>
       </ul>
-      <a href="#form" class="inline-block mt-6 bg-[#E2007A] text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition transform btn-pop">Demander mon devis gratuit</a>
+      <a href="#form"
+         class="inline-block mt-6 bg-[#E2007A] text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition transform btn-pop">
+        Demander mon devis gratuit
+      </a>
     </div>
 
-    <!-- COLONNE PHOTO (À DROITE) -->
+    <!-- COLONNE PHOTO -->
     <div class="flex justify-center items-start">
-        <img id="ownerPhoto"
-             src="https://drive.google.com/uc?export=view&id=1vQ89blHdlxj2K56PGjF7EV-kHwIawqbq"
-             alt="Karine & Gregory – DOMETVIE"
-             class="rounded-2xl shadow-xl max-w-xs h-auto ring-4 ring-[#E2007A]/10"
-             loading="lazy"
-             onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/d/1vQ89blHdlxj2K56PGjF7EV-kHwIawqbq=w800';"/>
+      <img id="ownerPhoto"
+           src="https://drive.google.com/uc?export=view&id=1vQ89blHdlxj2K56PGjF7EV-kHwIawqbq"
+           alt="Karine &amp; Gregory – DOMETVIE"
+           class="rounded-2xl shadow-xl max-w-xs h-auto ring-4 ring-[#E2007A]/10"
+           loading="lazy"
+           onerror="this.onerror=null;this.src='https://lh3.googleusercontent.com/d/1vQ89blHdlxj2K56PGjF7EV-kHwIawqbq=w800';" />
     </div>
   </section>
 
   <!-- FORMULAIRE -->
   <section class="container mx-auto px-4 pb-16">
-    <form id="form" class="space-y-4 max-w-xl mx-auto bg-white p-6 rounded-2xl shadow" novalidate> mx-auto px-4 pb-16">
     <form id="form" class="space-y-4 max-w-xl mx-auto bg-white p-6 rounded-2xl shadow" novalidate>
       <div>
         <label class="text-sm font-medium" for="nom_prenom">Nom &amp; Prénom</label>
-        <input id="nom_prenom" name="nom_prenom" type="text" class="w-full border px-3 py-2 rounded-xl" required />
+        <input id="nom_prenom" name="nom_prenom" type="text"
+               class="w-full border px-3 py-2 rounded-xl" required />
       </div>
       <div>
         <label class="text-sm font-medium" for="phone">Téléphone</label>
-        <input id="phone" name="phone" type="tel" inputmode="tel" class="w-full border px-3 py-2 rounded-xl" required />
+        <input id="phone" name="phone" type="tel" inputmode="tel"
+               class="w-full border px-3 py-2 rounded-xl" required />
       </div>
       <div>
         <label class="text-sm font-medium" for="email">Email</label>
-        <input id="email" name="email" type="email" class="w-full border px-3 py-2 rounded-xl" required />
+        <input id="email" name="email" type="email"
+               class="w-full border px-3 py-2 rounded-xl" required />
       </div>
       <div>
-        <label class="text-sm font-medium" for="postal_code">Code postal</label>
-        <input id="postal_code" name="postal_code" type="text" inputmode="numeric" pattern="[0-9]{5}" class="w-full border px-3 py-2 rounded-xl" required />
+        <label class="text-sm font-medium" for="commune">Commune</label>
+        <input id="commune" name="commune" type="text"
+               class="w-full border px-3 py-2 rounded-xl" required />
       </div>
 
       <fieldset class="border rounded-xl p-4">
         <legend class="text-sm font-semibold">Quel est votre projet ?</legend>
         <div class="mt-3 grid grid-cols-1 gap-3">
-          <label class="flex items-center gap-3"><input type="checkbox" name="interests" value="monte_escalier" class="h-5 w-5"> <span>Monte-escalier</span></label>
-          <label class="flex items-center gap-3"><input type="checkbox" name="interests" value="douche_securisee" class="h-5 w-5"> <span>Douche sécurisée</span></label>
-          <label class="flex items-center gap-3"><input type="checkbox" name="interests" value="douche_pmr" class="h-5 w-5"> <span>Douche PMR</span></label>
-          <label class="flex items-center gap-3"><input type="checkbox" name="interests" value="ascenseur_privatifs" class="h-5 w-5"> <span>Ascenseur privatif</span></label>
-          <label class="flex items-center gap-3"><input type="checkbox" name="interests" value="domotique" class="h-5 w-5"> <span>Domotique</span></label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" name="interests" value="monte_escalier" class="h-5 w-5">
+            <span>Monte-escalier</span>
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" name="interests" value="douche_securisee" class="h-5 w-5">
+            <span>Douche sécurisée</span>
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" name="interests" value="douche_pmr" class="h-5 w-5">
+            <span>Douche PMR</span>
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" name="interests" value="ascenseur_privatifs" class="h-5 w-5">
+            <span>Ascenseur privatif</span>
+          </label>
+          <label class="flex items-center gap-3">
+            <input type="checkbox" name="interests" value="domotique" class="h-5 w-5">
+            <span>Domotique</span>
+          </label>
         </div>
       </fieldset>
 
-      <button type="submit" id="submitBtn" class="w-full bg-[#E2007A] text-white py-3 rounded-xl font-semibold">Envoyer ma demande</button>
+      <button type="submit" id="submitBtn"
+              class="w-full bg-[#E2007A] text-white py-3 rounded-xl font-semibold">
+        Envoyer ma demande
+      </button>
       <p id="formMsg" class="text-sm text-gray-600 mt-2"></p>
     </form>
   </section>
 
   <footer class="bg-gray-900 text-gray-300 py-10">
-    <div class="container mx-auto px-4 text-center text-sm">© DOMETVIE Lyon Sud Ouest — Adaptation de domicile pour seniors & PMR.</div>
+    <div class="container mx-auto px-4 text-center text-sm">
+      © DOMETVIE Lyon Sud Ouest — Adaptation de domicile pour seniors &amp; PMR.
+    </div>
   </footer>
 
   <!-- Script envoi + redirection merci -->
   <script>
-    const WEBHOOK_URL = 'https://hook.eu1.make.com/kuh3w1knowsfl2kfacvx5311x8muvylr';
-    const form = document.getElementById('form');
-    const btn = document.getElementById('submitBtn');
-    const msg = document.getElementById('formMsg');
+    (function(){
+      var WEBHOOK_URL = 'https://hook.eu1.make.com/kuh3w1knowsfl2kfacvx5311x8muvylr';
+      var form = document.getElementById('form');
+      var btn  = document.getElementById('submitBtn');
+      var msg  = document.getElementById('formMsg');
 
-    function getCheckedInterests(){
-      return Array.from(document.querySelectorAll('input[name="interests"]:checked')).map(i=>i.value);
-    }
-    function getUTMs(){
-      const p = new URLSearchParams(location.search);
-      return {
-        utm_source: p.get('utm_source'),
-        utm_medium: p.get('utm_medium'),
-        utm_campaign: p.get('utm_campaign'),
-        utm_content: p.get('utm_content'),
-        utm_term: p.get('utm_term')
-      };
-    }
+      if (!form || !btn) return;
 
-    form?.addEventListener('submit', async (e)=>{
-      e.preventDefault();
-      msg.textContent='';
-      if(!form.checkValidity()){
-        msg.textContent='Merci de vérifier les champs requis.';
-        return;
+      function getCheckedInterests(){
+        var checked = document.querySelectorAll('input[name="interests"]:checked');
+        var values = [];
+        checked.forEach(function(i){ values.push(i.value); });
+        return values;
       }
-      btn.disabled = true; btn.textContent='Envoi en cours…';
 
-      const payload = {
-        source: 'landing-dometvie-lyon-sud-ouest',
-        nom_prenom: document.getElementById('nom_prenom')?.value || '',
-        phone: document.getElementById('phone')?.value || '',
-        email: document.getElementById('email')?.value || '',
-        postal_code: document.getElementById('postal_code')?.value || '',
-        interests: getCheckedInterests(),
-        ...getUTMs(),
-        ts: new Date().toISOString(),
-        page: location.href
-      };
-
-      try{
-        if(window.fbq){ fbq('track','Lead',{content_name:'Lead DOMETVIE Lyon Sud Ouest'}); }
-        const controller = new AbortController();
-        const timeout = setTimeout(()=>controller.abort(), 7000);
-        try{
-          await fetch(WEBHOOK_URL, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload), signal: controller.signal});
-        }catch(err){ console.warn('Webhook indisponible, on redirige quand même.', err); }
-        finally{ clearTimeout(timeout); }
-        // Redirection quoi qu'il arrive
-        window.location.href = 'merci.html';
-        return;
-      }catch(err){
-        console.error('Erreur soumission formulaire:', err);
-        window.location.href = 'merci.html';
-        return;
-      }finally{
-        btn.disabled=false; btn.textContent='Envoyer ma demande';
+      function getUTMs(){
+        var p = new URLSearchParams(window.location.search || '');
+        return {
+          utm_source:  p.get('utm_source'),
+          utm_medium:  p.get('utm_medium'),
+          utm_campaign:p.get('utm_campaign'),
+          utm_content: p.get('utm_content'),
+          utm_term:    p.get('utm_term')
+        };
       }
-    });
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        msg.textContent = '';
+
+        if (!form.checkValidity()){
+          msg.textContent = 'Merci de vérifier les champs requis.';
+          return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = 'Envoi en cours…';
+
+        var payload = {
+          source:      'landing-dometvie-lyon-sud-ouest',
+          nom_prenom:  (document.getElementById('nom_prenom') || {}).value || '',
+          phone:       (document.getElementById('phone') || {}).value || '',
+          email:       (document.getElementById('email') || {}).value || '',
+          commune:     (document.getElementById('commune') || {}).value || '',
+          interests:   getCheckedInterests(),
+          ts:          new Date().toISOString(),
+          page:        window.location.href
+        };
+
+        var utms = getUTMs();
+        for (var k in utms) { payload[k] = utms[k]; }
+
+        try {
+          if (window.fbq) {
+            window.fbq('track','Lead',{content_name:'Lead DOMETVIE Lyon Sud Ouest'});
+          }
+        } catch(e) {}
+
+        try {
+          if (window.fetch) {
+            fetch(WEBHOOK_URL, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            })
+            .then(function(){
+              window.location.href = 'merci.html';
+            })
+            .catch(function(err){
+              console.warn('Erreur webhook, redirection quand même', err);
+              window.location.href = 'merci.html';
+            });
+          } else {
+            window.location.href = 'merci.html';
+          }
+        } catch(err) {
+          console.error('Erreur soumission formulaire:', err);
+          window.location.href = 'merci.html';
+        }
+      });
+    })();
   </script>
 </body>
 </html>
+
 
