@@ -45,13 +45,13 @@
     </div>
   </header>
 
-  <!-- HERO -->
-    <!-- HERO avec image de fond douche -->
+  <!-- HERO avec image de fond (tes 2 photos GitHub) -->
   <section
     class="relative container mx-auto px-4 py-12 grid md:grid-cols-2 gap-10 items-start bg-cover bg-center bg-no-repeat"
     style="background-image:
       linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.82)),
-      url('https://drive.google.com/uc?export=view&id=1eQ0_14qE9lSgBIAyBcZtjh7dRha8J9Ig');">
+      url('https://raw.githubusercontent.com/rfdeveloppementbot/dometvie-landing/main/Capture%20d%E2%80%99%C3%A9cran%202025-11-14%20%C3%A0%2016.14.43.png'),
+      url('https://raw.githubusercontent.com/rfdeveloppementbot/dometvie-landing/main/Capture%20d%E2%80%99%C3%A9cran%202025-11-14%20%C3%A0%2016.15.08.png');">
 
     <!-- COLONNE TEXTE -->
     <div>
@@ -77,7 +77,7 @@
       </a>
     </div>
 
-    <!-- COLONNE PHOTO -->
+    <!-- COLONNE PHOTO Karine & Gregory -->
     <div class="flex justify-center items-start">
       <img id="ownerPhoto"
            src="https://drive.google.com/uc?export=view&id=1vQ89blHdlxj2K56PGjF7EV-kHwIawqbq"
@@ -86,7 +86,6 @@
            loading="lazy" />
     </div>
   </section>
-
 
   <!-- FORMULAIRE -->
   <section class="container mx-auto px-4 pb-16">
@@ -152,7 +151,7 @@
     </div>
   </footer>
 
-  <!-- Script envoi + redirection merci -->
+  <!-- Script envoi + message de remerciement -->
   <script>
     (function(){
       var WEBHOOK_URL = 'https://hook.eu1.make.com/kuh3w1knowsfl2kfacvx5311x8muvylr';
@@ -184,6 +183,7 @@
         e.preventDefault();
         msg.textContent = '';
 
+        // Vérif des champs requis
         if (!form.checkValidity()){
           msg.textContent = 'Merci de vérifier les champs requis.';
           return;
@@ -192,6 +192,7 @@
         btn.disabled = true;
         btn.textContent = 'Envoi en cours…';
 
+        // Données envoyées à Make
         var payload = {
           source:      'landing-dometvie-lyon-sud-ouest',
           nom_prenom:  (document.getElementById('nom_prenom') || {}).value || '',
@@ -206,37 +207,41 @@
         var utms = getUTMs();
         for (var k in utms) { payload[k] = utms[k]; }
 
+        // Pixel Lead
         try {
           if (window.fbq) {
             window.fbq('track','Lead',{content_name:'Lead DOMETVIE Lyon Sud Ouest'});
           }
         } catch(e) {}
 
+        // Envoi vers Make (sans bloquer l'affichage)
         try {
           if (window.fetch) {
             fetch(WEBHOOK_URL, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify(payload)
-            })
-            .then(function(){
-              window.location.href = 'merci.html';
-            })
-            .catch(function(err){
-              console.warn('Erreur webhook, redirection quand même', err);
-              window.location.href = 'merci.html';
+            }).catch(function(err){
+              console.warn('Erreur webhook', err);
             });
-          } else {
-            window.location.href = 'merci.html';
           }
         } catch(err) {
-          console.error('Erreur soumission formulaire:', err);
-          window.location.href = 'merci.html';
+          console.error('Erreur soumission webhook:', err);
         }
+
+        // Afficher un vrai remerciement sur la page
+        form.innerHTML = `
+          <div class="text-center py-10">
+            <h2 class="text-3xl font-extrabold text-[#E2007A] mb-4">Merci pour votre demande !</h2>
+            <p class="text-lg text-gray-700">Votre message a bien été transmis.</p>
+            <p class="text-gray-600 mt-2">Karine et Gregory vous rappelleront très prochainement pour parler de votre projet.</p>
+          </div>
+        `;
       });
     })();
   </script>
 </body>
 </html>
+
 
 
