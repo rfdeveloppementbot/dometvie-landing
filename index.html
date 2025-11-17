@@ -359,6 +359,37 @@
 </head>
 
 <body>
+  
+<script>
+  const makeWebhookUrl = "https://hook.eu1.make.com/kuh3w1knowsfl2kfacvx5311x8muvylr";
+
+  const form = document.getElementById('devis-form');
+  const merciBloc = document.getElementById('merci-inline');
+
+  form.addEventListener('submit', async function (event) {
+    event.preventDefault(); // Empêche le rechargement de la page
+
+    const formData = new FormData(form);
+
+    try {
+      // Envoi des données à Make
+      await fetch(makeWebhookUrl, {
+        method: 'POST',
+        body: formData
+      });
+
+      // Masquer le formulaire
+      form.style.display = 'none';
+
+      // Afficher le bloc "merci"
+      merciBloc.style.display = 'block';
+
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi vers Make :', error);
+      alert("Une erreur est survenue. Merci de réessayer plus tard.");
+    }
+  });
+</script>
 
   <!-- HEADER + HERO -->
   <header>
