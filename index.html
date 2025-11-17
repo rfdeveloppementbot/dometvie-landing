@@ -161,7 +161,7 @@
     .hero-photo-card img {
       width: 220px;
       height: 220px;
-      border-radius: 1rem; /* carré à coins arrondis (plus carré que rond) */
+      border-radius: 1rem; /* carré à coins arrondis */
       object-fit: cover;
       margin: 0 auto 0.7rem;
     }
@@ -181,7 +181,7 @@
       color: var(--rose-dark);
     }
 
-    /* QUESTIONNAIRE DES BESOINS (ex A PROPOS) */
+    /* QUESTIONNAIRE DES BESOINS */
     .about-grid {
       display: grid;
       grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
@@ -202,20 +202,17 @@
     .needs-options {
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.6rem;
       margin-bottom: 1rem;
     }
     .needs-option {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
+      display: block;
+      font-size: 0.95rem;
+      color: #374151;
     }
     .needs-option input[type="checkbox"] {
-      margin-top: 0.15rem;
+      margin-right: 0.45rem;
       accent-color: var(--rose-main);
-    }
-    .needs-option span {
-      flex: 1;
     }
     .needs-note {
       font-size: 0.8rem;
@@ -400,7 +397,7 @@
     </div>
   </header>
 
-  <!-- QUESTIONNAIRE DES BESOINS (remplace l'ancien accompagnement local) -->
+  <!-- QUESTIONNAIRE DES BESOINS -->
   <section id="a-propos">
     <div class="container">
       <h2>Quel est votre besoin principal&nbsp;?</h2>
@@ -421,23 +418,23 @@
           <div class="needs-options">
             <label class="needs-option">
               <input type="checkbox" name="besoins" value="douche-securisee">
-              <span>Remplacement de baignoire par une douche sécurisée</span>
+              Remplacement de baignoire par une douche sécurisée
             </label>
             <label class="needs-option">
               <input type="checkbox" name="besoins" value="salle-de-bain">
-              <span>Rénovation complète de la salle de bain</span>
+              Rénovation complète de la salle de bain
             </label>
             <label class="needs-option">
               <input type="checkbox" name="besoins" value="monte-escalier">
-              <span>Installation d’un monte-escalier</span>
+              Installation d’un monte-escalier
             </label>
             <label class="needs-option">
               <input type="checkbox" name="besoins" value="accessibilite">
-              <span>Aménagement des accès (rampes, seuils, circulations)</span>
+              Aménagement des accès (rampes, seuils, circulations)
             </label>
             <label class="needs-option">
               <input type="checkbox" name="besoins" value="autre">
-              <span>Autre besoin d’adaptation du logement</span>
+              Autre besoin d’adaptation du logement
             </label>
           </div>
 
