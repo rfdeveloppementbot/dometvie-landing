@@ -199,20 +199,30 @@
       box-shadow: 0 10px 20px rgba(180, 20, 90, 0.06);
       font-size: 0.95rem;
     }
-    .needs-options {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-      margin-bottom: 1rem;
-    }
-    .needs-option {
-      display: block;
-      font-size: 0.95rem;
-      color: #374151;
-    }
-    .needs-option input[type="checkbox"] {
-      margin-right: 0.45rem;
-      accent-color: var(--rose-main);
+   .needs-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+/* Chaque ligne = case + texte côte à côte */
+.needs-option {
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+/* Case plus grosse et bien alignée */
+.needs-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.55rem;
+  margin-top: 0.1rem;
+  accent-color: var(--rose-main);
+}
+
     }
     .needs-note {
       font-size: 0.8rem;
