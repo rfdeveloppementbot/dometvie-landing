@@ -553,7 +553,10 @@
       <div>
         <h2>Demander un devis gratuit</h2>
 
-        <form action=https://hook.eu1.make.com/kuh3w1knowsfl2kfacvx5311x8muvylr
+        <h2>Demander un devis gratuit</h2>
+
+<!-- FORMULAIRE -->
+<form id="devis-form">
   <label for="nom">Nom *</label>
   <input id="nom" name="nom" type="text" required>
 
@@ -563,8 +566,8 @@
   <label for="email">Email</label>
   <input id="email" name="email" type="email">
 
-  <label for="email">Commune</label>
-  <input id="email" name="commune" type="text" required>
+  <label for="commune">Commune *</label>
+  <input id="commune" name="commune" type="text" required>
 
   <label for="projet">Votre projet</label>
   <textarea id="projet" name="projet"></textarea>
@@ -572,19 +575,12 @@
   <button type="submit" class="btn btn-primary" style="margin-top:1rem;">Envoyer</button>
 </form>
 
-      </div>
-
-      <div>
-        <h2 style="color:var(--rose-dark)">Contact</h2>
-        <p>DOMetVIE Lyon Sud-Ouest<br>Basé à Taluyers</p>
-      </div>
-
-    </div>
-  </section>
-
-  <footer>
-    DOMetVIE Lyon Sud-Ouest — Tous droits réservés
-  </footer>
-
-</body>
-</html>
+<!-- MESSAGE MERCI directement dans index.html -->
+<div id="merci-inline" style="display:none; margin-top:1.5rem;">
+  <h3>Merci pour votre demande</h3>
+  <p>
+    Votre demande a bien été envoyée.<br>
+    Nous vous recontacterons prochainement pour échanger sur votre projet.
+  </p>
+  <a href="#top" class="btn btn-ghost">Retour en haut de la page</a>
+</div>
