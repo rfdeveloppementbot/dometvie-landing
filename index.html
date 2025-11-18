@@ -205,14 +205,12 @@
       gap: 0.7rem;
       margin-bottom: 1rem;
     }
-    /* Chaque ligne = case + texte côte à côte */
     .needs-option {
       display: flex;
       align-items: flex-start;
       font-size: 0.95rem;
       color: #374151;
     }
-    /* Case plus grosse et bien alignée */
     .needs-option input[type="checkbox"] {
       width: 18px;
       height: 18px;
@@ -606,6 +604,15 @@
         event.preventDefault(); // Empêche le rechargement de la page
 
         const formData = new FormData(form);
+
+        // 🔴 NOUVEAU : on construit un champ texte "besoins_concat"
+        const besoinsSelectionnes = Array
+          .from(document.querySelectorAll('input[name="besoins[]"]:checked'))
+          .map(input => input.value)
+          .join(', ');
+
+        formData.append('besoins_concat', besoinsSelectionnes);
+        // 🔴 FIN NOUVEAU
 
         try {
           await fetch(makeWebhookUrl, {
