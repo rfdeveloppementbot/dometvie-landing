@@ -350,7 +350,6 @@
       }
     }
   </style>
-    </style>
 
   <!-- Meta Pixel Code -->
   <script>
@@ -362,7 +361,7 @@
     t.src='https://connect.facebook.net/en_US/fbevents.js';
     s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script');
-    fbq('init', 'TON_ID_PIXEL_ICI'); 
+    fbq('init', '978319857478504'); 
     fbq('track', 'PageView');
   </script>
   <noscript>
@@ -370,8 +369,6 @@
          src="https://www.facebook.com/tr?id=978319857478504&ev=PageView&noscript=1"/>
   </noscript>
   <!-- End Meta Pixel Code -->
-
-</head>
 
 </head>
 
@@ -616,7 +613,7 @@
     DOMetVIE Lyon Sud-Ouest — Tous droits réservés
   </footer>
 
-  <!-- SCRIPT EN BAS (pour le “merci” + Make) -->
+  <!-- SCRIPT EN BAS (pour le “merci” + Make + Pixel Lead) -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const makeWebhookUrl = "https://hook.eu1.make.com/kuh3w1knowsfl2kfacvx5311x8muvylr";
@@ -631,7 +628,7 @@
 
         const formData = new FormData(form);
 
-        // 🔴 Besoins concaténés
+        // Besoins concaténés
         const besoinsSelectionnes = Array
           .from(document.querySelectorAll('input[name="besoins[]"]:checked'))
           .map(input => input.value)
@@ -639,7 +636,7 @@
 
         formData.append('besoins_concat', besoinsSelectionnes);
 
-        // ✅ NOUVEAU : date/heure au format ISO
+        // Date/heure au format ISO
         const now = new Date().toISOString();
         formData.append('timestamp', now);
 
@@ -649,7 +646,7 @@
             body: formData
           });
 
-          // 🔹 Tracking Meta Pixel : Lead
+          // Tracking Meta Pixel : Lead
           if (typeof fbq === 'function') {
             fbq('track', 'Lead', {
               nom: formData.get('nom'),
@@ -672,7 +669,6 @@
           console.error('Erreur lors de l\'envoi vers Make :', error);
           alert("Une erreur est survenue. Merci de réessayer plus tard.");
         }
-}
       });
     });
   </script>
